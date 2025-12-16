@@ -17,8 +17,8 @@ body {
   display: flex;
   flex-direction: column; 
   min-height: 100vh;
-  /* background-color: #ffff; */
-  background-image: url("/public/sourcat.gif");
+  background-color: #f7e1e1;
+  /* background-image: url("/public/sourcat.gif"); */
   background-repeat: no-repeat; 
   background-position: left; 
   background-size: auto;  
@@ -31,9 +31,11 @@ h2 {
 
 button {
   border-radius: 8px;
+  background-color: transparent;
   border:  transparent;
   padding: 0.6em 1.2em;
   cursor: pointer;
+  
 }
 
 button:hover {
@@ -56,20 +58,51 @@ button:focus-visible {
   z-index: 1;
 }
 
-/* .bg-video {
-  position: fixed;
-  inset: 0;
+/* catfacts og users */
+
+.row-container{
+    display: flex;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  border: 5px solid red;
-} */
+  justify-content: space-between; 
+  gap: 20px; 
+}
 
 /* CAT-FACTS */
 /* --------------------------------------- */
+
+.animation-container{
+   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder-animation{
+  width: 100px;
+  height: 100px;
+   border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  header + animasjon */
+.cat-header {
+  display: flex;
+  align-items: center;  
+  gap: 0.5rem;          
+}
+
+
+.cat-animation {
+  width: 170px;          
+  height: auto;
+}
+
+
+
 .cat-facts-container {
-  background-color: antiquewhite;
+  background-color: #ffff;
   padding: 1.5rem;
   border-radius: 12px;
   max-width: 500px;
@@ -90,7 +123,7 @@ button:focus-visible {
 }
 
 .cat-facts-container li{
-  background-color: #fff;
+  background-color: #fbecec;
   margin-bottom: 0.5rem;
   padding: 0.75rem 1rem;
   border-radius: 8px;
@@ -98,6 +131,22 @@ button:focus-visible {
   transition: transform 0.2;
 
 }
+
+.refresh-button {
+  background-color: #404147;  
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 1rem; 
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.refresh-button:hover {
+  transform: scale(1.1);
+}
+
 
 .loading, .error{
   text-align: center;
@@ -107,11 +156,13 @@ button:focus-visible {
 }
 
 
+
+
 /* USERS-COMPONENT */
 /* ---------------------------------------- */
 
 .users-container{
-  background-color: #f0f0f0;
+  background-color: #ffff;
   padding: 2rem;
   border-radius: 12px;
   max-width: 500px;
@@ -128,7 +179,7 @@ button:focus-visible {
 .users-container li{
   padding: 0.5rem 1rem;
   margin-bottom: 0.5rem;
-  background-color: #fff;
+  background-color: #fbecec;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
@@ -140,7 +191,7 @@ button:focus-visible {
 
 .add-user-form input{
   padding: 0.5rem;
-  margin-right: 0.5rem;
+  margin: 0.5rem;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
@@ -154,10 +205,11 @@ button:focus-visible {
 .add-user-form button{
   padding: 0.5rem 1rem;
   border-radius: 6px;
+  margin: 0.5rem;
   border: none;
   cursor: pointer;
-background-color: #213547;
-color: white;
+  background-color: #213547;
+  color: white;
 }
 
 /* MEDIAQUERYS */
@@ -168,10 +220,5 @@ color: white;
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #ffffff;
-  }
+  
 }

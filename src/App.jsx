@@ -8,14 +8,13 @@ import "./App.css";
 function App() {
   return (
     <>
-      <video className="bg-video" autoPlay muted loop playsInline>
-        <source src="/cat.one.mp4" type="video/mp4" />
-      </video>
-
       <div className="main-container">
         <CookieClicker />
-        <CatFacts />
-        <Users />
+
+        <div className="row-container">
+          <CatFacts />
+          <Users />
+        </div>
       </div>
     </>
   );
