@@ -2,7 +2,7 @@
   "name": "coocieclickeroppgaven",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://aashildf.github.io/cookie-clicker",
+  "homepage": "https://aashildf.github.io/Cookie-clicker/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
